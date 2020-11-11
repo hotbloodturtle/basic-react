@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { actionCreators as boardActions } from "../../redux/modules/boards";
 import BoardList from "./presenter";
