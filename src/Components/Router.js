@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
-import Home from "../Routes/Home";
-import BoardList from "../Routes/BoardList";
+import Home from "../routes/Home";
+import BoardList from "../routes/BoardList";
 
 const Router = () => (
   <BrowserRouter>

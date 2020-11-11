@@ -6,6 +6,6 @@ const Test = styled.div`
   background-color: red;
 `;
 
-const HomePresenter = () => <Test />;
+const Home = () => <Test />;
 
-export default HomePresenter;
+export default Home;
