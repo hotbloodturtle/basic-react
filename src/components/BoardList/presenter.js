@@ -19,6 +19,7 @@ const BoardList = (props) => {
   const { boardList } = props;
   return (
     <>
+      <Link to={"/boards/create"}>create</Link>
       {boardList && boardList.map((item) => <Board {...item} key={item.id} />)}
     </>
   );

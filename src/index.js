@@ -4,10 +4,10 @@ import store from "./redux/configureStore";
 import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
-import Home from "./routes/Home";
-import BoardList from "./routes/BoardList";
-import BoardDetail from "./routes/BoardDetail";
-import BoardCreate from "./routes/BoardCreate";
+import Home from "./components/Home";
+import BoardList from "./components/BoardList";
+import BoardDetail from "./components/BoardDetail";
+import BoardCreate from "./components/BoardCreate";
 
 ReactDOM.render(
   <Provider store={store}>

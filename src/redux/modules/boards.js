@@ -43,6 +43,20 @@ function getBoardDetail(id) {
       });
   };
 }
+function createBoard(item) {
+  return (dispatch) => {
+    boardsApi
+      .boardCreate(item)
+      .then((response) => {
+        dispatch(() => {
+          window.location.href = "/boards";
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+}
 
 // Initial State
 const initialState = {};
@@ -79,6 +93,7 @@ function applySetBoardDetail(state, action) {
 const actionCreators = {
   getBoardList,
   getBoardDetail,
+  createBoard,
 };
 export { actionCreators };
 
