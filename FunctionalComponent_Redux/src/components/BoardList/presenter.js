@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import BoardDelete from "../BoardDelete";
 
 const Container = styled.div`
   width: 100px;
@@ -22,6 +23,7 @@ const Board = ({ id, title }) => {
       <Link to={`/boards/update/${id}`}>
         <BtnUpdate>update</BtnUpdate>
       </Link>
+      <BoardDelete id={id} />
     </>
   );
 };

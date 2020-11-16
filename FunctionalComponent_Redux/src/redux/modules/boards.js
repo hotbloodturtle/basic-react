@@ -73,6 +73,19 @@ function updateBoard(item) {
   };
 }
 
+function deleteBoard(id) {
+  return () => {
+    boardsApi
+      .boardDelete(id)
+      .then((response) => {
+        window.location.href = "/boards";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+}
+
 // Initial State
 const initialState = {};
 
@@ -111,6 +124,7 @@ const actionCreators = {
   createBoard,
   updateBoard,
   setBoardDetail,
+  deleteBoard,
 };
 export { actionCreators };
 
