@@ -58,6 +58,21 @@ function createBoard(item) {
   };
 }
 
+function updateBoard(item) {
+  return (dispatch) => {
+    boardsApi
+      .boardUpdate(item)
+      .then((response) => {
+        dispatch(() => {
+          window.location.href = "/boards";
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+}
+
 // Initial State
 const initialState = {};
 
@@ -94,6 +109,8 @@ const actionCreators = {
   getBoardList,
   getBoardDetail,
   createBoard,
+  updateBoard,
+  setBoardDetail,
 };
 export { actionCreators };
 

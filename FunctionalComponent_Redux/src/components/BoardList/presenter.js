@@ -7,11 +7,22 @@ const Container = styled.div`
   border: 1px solid blue;
 `;
 
+const BtnUpdate = styled.div`
+  width: 100px;
+  height: 25px;
+  border: 1px solid green;
+`;
+
 const Board = ({ id, title }) => {
   return (
-    <Link to={`/boards/${id}`}>
-      <Container>{title}</Container>
-    </Link>
+    <>
+      <Link to={`/boards/${id}`}>
+        <Container>{title}</Container>
+      </Link>
+      <Link to={`/boards/update/${id}`}>
+        <BtnUpdate>update</BtnUpdate>
+      </Link>
+    </>
   );
 };
 

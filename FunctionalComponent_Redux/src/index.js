@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import BoardList from "./components/BoardList";
 import BoardDetail from "./components/BoardDetail";
 import BoardCreate from "./components/BoardCreate";
+import BoardUpdate from "./components/BoardUpdate";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/boards/create" exact component={BoardCreate} />
         <Route path="/boards" exact component={BoardList} />
         <Route path="/boards/:id" exact component={BoardDetail} />
+        <Route path="/boards/update/:id" exact component={BoardUpdate} />
       </Switch>
     </BrowserRouter>
   </Provider>,

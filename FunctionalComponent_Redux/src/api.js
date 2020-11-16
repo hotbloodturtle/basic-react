@@ -6,4 +6,5 @@ export const boardsApi = {
   boardList: () => api.get("boards/"),
   boardDetail: (id) => api.get(`boards/${id}/`),
   boardCreate: (item) => api.post("boards/", item),
+  boardUpdate: (item) => api.patch(`boards/${item.id}/`, item),
 };

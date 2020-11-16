@@ -1,35 +1,7 @@
-import styled from "styled-components";
+import BoardForm from "../BoardForm";
 
 const BoardCreate = ({ handleSubmit, handleChange }) => {
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="">title </label>
-          <input
-            type="text"
-            name="title"
-            onChange={handleChange}
-            style={{ border: "1px solid black" }}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="">content </label>
-          <input
-            type="text"
-            name="content"
-            onChange={handleChange}
-            style={{ border: "1px solid black" }}
-          />
-        </div>
-
-        <div>
-          <input type="submit" value="submit" />
-        </div>
-      </form>
-    </div>
-  );
+  return <BoardForm handleSubmit={handleSubmit} handleChange={handleChange} />;
 };
 
 export default BoardCreate;

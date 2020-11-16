@@ -1,9 +1,10 @@
-import { useEffect } from "react";
 import BoardDetail from "./presenter";
 
 const Container = (props) => {
   const { boardDetail, getBoardDetail } = props;
-  useEffect(getBoardDetail, []);
+  if (!boardDetail) {
+    getBoardDetail();
+  }
 
   return <BoardDetail boardDetail={boardDetail} />;
 };
